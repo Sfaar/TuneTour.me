@@ -14,9 +14,9 @@
     function artistLookup() {
       artistName = $("#artistNameInput").val();
       var artistNameEnc = (encodeURIComponent(encodeURIComponent(artistName)));
-      $("#result").html("fetching tour data for: " + artistName);
+      $("#artistLookupResult").html("fetching tour data for: " + artistName);
       var request = $.ajax({
-        url: "get.php?url=http://api.bandsintown.com/artists/" + artistNameEnc + ".json?app_id=LoneTigers",
+        url: "get.php?url=http://api.bandsintown.com/artists/" + artistNameEnc + ".json?app_id=Tail2Tune",
         type: "GET",
         dataType: "text"
       });
@@ -31,7 +31,7 @@
     function processLookupResult(json) {
       var artist = jQuery.parseJSON(json);
       if(artist.mbid===undefined || artist.mbid===null){
-        $("#artistLookupResult").html("no such artist");
+        $("#artistLookupResult").html("we don't know about this artist; check spelling may be?");
       }else{
         var text = "";
         artistName = artist.name;
@@ -41,6 +41,31 @@
         else text = artistName+" has "+eventCount+" upcoming events";
         $("#artistLookupResult").html(text);
         $("#listEventsButton").show();
+      }
+    }
+
+    function listEvents() {
+      $("#eventsList").html("listing tours for: " + artistName);
+      var artistNameEnc = (encodeURIComponent(encodeURIComponent(artistName)));
+      var request = $.ajax({
+        url: "get.php?url=http://api.bandsintown.com/artists/" + artistNameEnc + "/events.json?app_id=LoneTigers",
+        type: "GET",
+        dataType: "text"
+      });
+      request.done(function (msg) {
+        processEvents(msg);
+      });
+      request.fail(function (jqXHR, textStatus) {
+        alert("Request failed: " + textStatus);
+      });
+    }
+
+    function processEvents(json){
+      var events = jQuery.parseJSON(json);
+      if(events===undefined){
+        $("#eventsList").html("couldn't list events");
+      }else{
+        $("#eventsList").html(json);
       }
     }
 
@@ -56,7 +81,7 @@
   <button id="artistButton" onclick="artistLookup()">hit it</button>
   <div id="artistLookupResult"></div>
   <button class="loadLater" id="listEventsButton" onclick="listEvents()">list upcoming events</button>
-  <div id=""></div>
+  <div id="eventsList"></div>
 </div>
 
 </body>
