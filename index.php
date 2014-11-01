@@ -9,36 +9,54 @@
 
   <script src="http://code.jquery.com/jquery-1.11.0.js"></script>
   <script type="application/javascript">
-    function artistClick(){
-
-      var artistName = $("#artistInput").val();
+    var artistName = "";
+    var eventCount = -1;
+    function artistLookup() {
+      artistName = $("#artistNameInput").val();
       var artistNameEnc = (encodeURIComponent(encodeURIComponent(artistName)));
-      $("#result").html("fetching tour data for: "+artistName);
+      $("#result").html("fetching tour data for: " + artistName);
       var request = $.ajax({
-        url: "rest.php?url=http://api.bandsintown.com/artists/"+artistNameEnc+"/events.json?app_id=LoneTigers",
+        url: "get.php?url=http://api.bandsintown.com/artists/" + artistNameEnc + ".json?app_id=LoneTigers",
         type: "GET",
-        dataType: "html"
+        dataType: "text"
       });
-
-      request.done(function(msg) {
-        $("#result").html(msg);
+      request.done(function (msg) {
+        processLookupResult(msg);
       });
-
-      request.fail(function(jqXHR, textStatus) {
-        alert( "Request failed: " + textStatus );
+      request.fail(function (jqXHR, textStatus) {
+        alert("Request failed: " + textStatus);
       });
     }
 
+    function processLookupResult(json) {
+      var artist = jQuery.parseJSON(json);
+      if(artist.mbid===undefined || artist.mbid===null){
+        $("#artistLookupResult").html("no such artist");
+      }else{
+        var text = "";
+        artistName = artist.name;
+        eventCount = artist.upcoming_events_count;
+        if(eventCount==0) text = "looks like "+artistName+" is staying out of stage for a while";
+        else if(eventCount==1) text = artistName+" has one upcoming event";
+        else text = artistName+" has "+eventCount+" upcoming events";
+        $("#artistLookupResult").html(text);
+        $("#listEventsButton").show();
+      }
+    }
+
+    $(document).ready(function () {
+      $(".loadLater").hide();
+    });
   </script>
 </head>
 <body>
 
 <div>
-    <input id="artistInput"/>
-    <button id="artistButton" onclick="artistClick()">hit it</button>
-  <div id="result">
-
-  </div>
+  Artist: <input id="artistNameInput"/>
+  <button id="artistButton" onclick="artistLookup()">hit it</button>
+  <div id="artistLookupResult"></div>
+  <button class="loadLater" id="listEventsButton" onclick="listEvents()">list upcoming events</button>
+  <div id=""></div>
 </div>
 
 </body>
