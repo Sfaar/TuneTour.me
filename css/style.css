@@ -1,0 +1,40 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway);
+html, body, #container{
+  color: #303;
+  font-size: 18pt;
+  font-family: "Raleway", Helvetica, Arial, Verdana, sans-serif;
+}
+
+#t2t {
+  width: 100%;
+  background: url("../img/Paramore_Concert.jpg");
+  background-size : cover;
+  background-repeat : no-repeat;
+  background-position : 50% 20%;
+}
+
+.pp-tableCell, .fp-tableCell  {text-align: center;}
+
+#artistNameInput,#artistButton{
+  font-size: 24pt;
+  line-height: 28pt;
+  vertical-align: baseline;
+}
+#artistNameInput{
+  color: purple;
+}
+#artistButton{
+  color: #666;
+}
+
+#artistLookupResult{
+  padding: 24pt;
+}
+
+#eventsList {
+  background: rgba(0,0,0,.8);
+  color: #FFFFFF;
+  margin: 12pt 8pt;
+  border: 1pt solid purple;
+  box-shadow: 0 0 20px purple;
+}
