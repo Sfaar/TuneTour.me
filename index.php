@@ -7,20 +7,30 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <title>Tail2Tune</title>
 
+  <style>
+    .event span {padding: 4px 8px;}
+  </style>
   <script src="http://code.jquery.com/jquery-1.11.0.js"></script>
   <script type="application/javascript">
     var artistName = "";
     var eventCount = -1;
+
+    function nameEncode(name){
+      name = name.replace("/","%2F");
+      return encodeURIComponent(encodeURIComponent(name));
+    }
+
     function artistLookup() {
+      $(".loadLater").hide();
       artistName = $("#artistNameInput").val();
-      var artistNameEnc = (encodeURIComponent(encodeURIComponent(artistName)));
       $("#artistLookupResult").html("fetching tour data for: " + artistName);
       var request = $.ajax({
-        url: "get.php?url=http://api.bandsintown.com/artists/" + artistNameEnc + ".json?app_id=Tail2Tune",
+        url: "get.php?url=http://api.bandsintown.com/artists/" + nameEncode(artistName) + ".json?app_id=Tail2Tune",
         type: "GET",
         dataType: "text"
       });
       request.done(function (msg) {
+        $("#res").html(msg);
         processLookupResult(msg);
       });
       request.fail(function (jqXHR, textStatus) {
@@ -46,13 +56,13 @@
 
     function listEvents() {
       $("#eventsList").html("listing tours for: " + artistName);
-      var artistNameEnc = (encodeURIComponent(encodeURIComponent(artistName)));
       var request = $.ajax({
-        url: "get.php?url=http://api.bandsintown.com/artists/" + artistNameEnc + "/events.json?app_id=LoneTigers",
+        url: "get.php?url=http://api.bandsintown.com/artists/" + nameEncode(artistName) + "/events.json?app_id=LoneTigers",
         type: "GET",
         dataType: "text"
       });
       request.done(function (msg) {
+        $("#res").html(msg);
         processEvents(msg);
       });
       request.fail(function (jqXHR, textStatus) {
@@ -60,12 +70,39 @@
       });
     }
 
+    function artistsArray2Text(artists){
+      var len = (artists.length-1);
+      var str = "";
+      for(var i=0; i<len; i++){
+        str+= artists[i].name+", ";
+      }str+= artists[i].name+"";
+      return str;
+    }
+
+    function event2Html(event){
+      var str = "<div class='event'>"
+              +"<span class='venue'>"+event.datetime+"</span>"
+              +"<span class='venue'>"+event.venue.name+"</span>"
+              +"<span class='city'>"+event.venue.city+"</span>"
+              +"<span class='city'>"+event.venue.region+"</span>"
+              +"<span class='city'>"+event.venue.country+"</span>"
+              +"<span class='ticket'>tickets "+event.ticket_status+"</span>"
+              +"<span class='eventartists'>"+artistsArray2Text(event.artists)+"</span>"
+          +"</div>";
+      return str;
+
+    }
+
     function processEvents(json){
+      $("#eventsList").show();
       var events = jQuery.parseJSON(json);
       if(events===undefined){
         $("#eventsList").html("couldn't list events");
       }else{
-        $("#eventsList").html(json);
+        $("#eventsList").html("");
+        for(var i = 0; i<events.length;i++) {
+          $("#eventsList").append(event2Html(events[i]));
+        }
       }
     }
 
@@ -81,8 +118,9 @@
   <button id="artistButton" onclick="artistLookup()">hit it</button>
   <div id="artistLookupResult"></div>
   <button class="loadLater" id="listEventsButton" onclick="listEvents()">list upcoming events</button>
-  <div id="eventsList"></div>
+  <div class="loadLater" id="eventsList"></div>
 </div>
+<div id="res"></div>
 
 </body>
 
