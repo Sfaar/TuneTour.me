@@ -106,14 +106,16 @@ class EventfulApi
     * @return array|null Returns am array if a call was made previously or
     * null otherwise.
     */
-   public function getResponseAsArray()
-   {
-    $json = json_decode(json_encode((array) simplexml_load_string($this->response)), 1);
-	  foreach($json["events"]["event"] as $event) {
-      if($event !=null && is_array($event) && array_key_exists("url",$event) && array_key_exists("title",$event))
-        echo "<span class='nearby'><a href='" . $event["url"] . "'>" . $event["title"] . "</a></span>";
+  public function getResponseAsArray()
+  {
+    $json = json_decode(json_encode((array)simplexml_load_string($this->response)), 1);
+    if (is_array($json) && array_key_exists("events", $json)) {
+      foreach ($json["events"]["event"] as $event) {
+        if ($event != null && is_array($event) && array_key_exists("url", $event) && array_key_exists("title", $event))
+          echo "<span class='nearby'><a href='" . $event["url"] . "'>" . $event["title"] . "</a></span>";
+      }
     }
-   }
+  }
 
    /**
     * Attempt to login with a specific user to get user specific API responses

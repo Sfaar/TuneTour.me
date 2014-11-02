@@ -3,10 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="84edb459-6235-410c-963c-a21ee2cf843a" name="Default" comment="">
       <change type="DELETED" beforePath="N:\SkyDrive\src\Tail2Tune\index2.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/get_hotels.php" afterPath="$PROJECT_DIR$/get_hotels.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EventfulApi.php" afterPath="$PROJECT_DIR$/EventfulApi.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Tail2Tune.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,12 +37,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.54913294" vertical-offset="834" max-vertical-offset="4930">
-              <caret line="77" column="33" selection-start-line="77" selection-start-column="33" selection-end-line="77" selection-end-column="33" />
-              <folding />
+            <state vertical-scroll-proportion="-4.685185" vertical-offset="3419" max-vertical-offset="4284">
+              <caret line="254" column="23" selection-start-line="254" selection-start-column="23" selection-end-line="254" selection-end-column="23" />
+              <folding>
+                <element signature="e#3515#5271#0#HTML" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -51,7 +52,7 @@
       <file leaf-file-name="get_hotels.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/get_hotels.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-68.65385" vertical-offset="0" max-vertical-offset="2550">
+            <state vertical-scroll-proportion="-67.19231" vertical-offset="38" max-vertical-offset="2550">
               <caret line="110" column="30" selection-start-line="110" selection-start-column="18" selection-end-line="110" selection-end-column="30" />
               <folding>
                 <element signature="e#168#263#0#PHP" expanded="false" />
@@ -66,23 +67,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EventfulApi.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/EventfulApi.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.425926" vertical-offset="69" max-vertical-offset="4471">
-              <caret line="34" column="52" selection-start-line="34" selection-start-column="52" selection-end-line="34" selection-end-column="75" />
-              <folding>
-                <element signature="e#6#336#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.964286" vertical-offset="1506" max-vertical-offset="2397">
-              <caret line="105" column="33" selection-start-line="105" selection-start-column="33" selection-end-line="105" selection-end-column="33" />
+            <state vertical-scroll-proportion="0.36251402" vertical-offset="0" max-vertical-offset="2448">
+              <caret line="19" column="17" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -109,8 +98,8 @@
         <option value="$PROJECT_DIR$/sites.xml" />
         <option value="$PROJECT_DIR$/get_hotels.php" />
         <option value="$PROJECT_DIR$/EventfulApi.php" />
-        <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/css/style.css" />
       </list>
     </option>
   </component>
@@ -293,7 +282,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="3213" max-vertical-offset="3451">
           <caret line="189" column="6" selection-start-line="189" selection-start-column="6" selection-end-line="189" selection-end-column="6" />
-          <folding />
+          <folding>
+            <element signature="e#3515#5271#0#HTML" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -331,17 +322,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/EventfulApi.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.425926" vertical-offset="69" max-vertical-offset="4471">
-          <caret line="34" column="52" selection-start-line="34" selection-start-column="52" selection-end-line="34" selection-end-column="75" />
+        <state vertical-scroll-proportion="2.1815028" vertical-offset="0" max-vertical-offset="4505">
+          <caret line="111" column="51" selection-start-line="111" selection-start-column="51" selection-end-line="111" selection-end-column="51" />
           <folding>
             <element signature="e#6#336#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.685185" vertical-offset="3419" max-vertical-offset="4284">
+          <caret line="254" column="23" selection-start-line="254" selection-start-column="23" selection-end-line="254" selection-end-column="23" />
+          <folding>
+            <element signature="e#3515#5271#0#HTML" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/get_hotels.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-68.65385" vertical-offset="0" max-vertical-offset="2550">
+        <state vertical-scroll-proportion="-67.19231" vertical-offset="38" max-vertical-offset="2550">
           <caret line="110" column="30" selection-start-line="110" selection-start-column="18" selection-end-line="110" selection-end-column="30" />
           <folding>
             <element signature="e#168#263#0#PHP" expanded="false" />
@@ -357,16 +358,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.964286" vertical-offset="1506" max-vertical-offset="2397">
-          <caret line="105" column="33" selection-start-line="105" selection-start-column="33" selection-end-line="105" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.54913294" vertical-offset="834" max-vertical-offset="4930">
-          <caret line="77" column="33" selection-start-line="77" selection-start-column="33" selection-end-line="77" selection-end-column="33" />
+        <state vertical-scroll-proportion="0.36251402" vertical-offset="0" max-vertical-offset="2448">
+          <caret line="19" column="17" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
           <folding />
         </state>
       </provider>

@@ -2,7 +2,7 @@
 html, body, #container{
   color: #515;
   font-size: 14pt;
-  font-family: "Raleway", Helvetica, Arial, Verdana, sans-serif;
+  font-family: "Exo", Helvetica, Arial, Verdana, sans-serif;
 }
 
 #t2t {
@@ -16,9 +16,12 @@ html, body, #container{
 .pp-tableCell, .fp-tableCell  {text-align: center;}
 
 #siteName{ font-size: 48pt; margin-top:10%; font-family: "Lobster", sans-serif;
-
+  background-size: 48pt;
+  display: block;
+  line-height: 80pt;
+  vertical-align: middle;
 }
-
+#siteName h1 {font-size: 48pt; display: inline-block; vertical-align: baseline}
 #artistNameInput,#artistButton{
   font-size: 24pt;
   line-height: 36pt;

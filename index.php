@@ -5,7 +5,7 @@
 <meta name="google-site-verification" content="xbuRNTGkdLHrkm1w367xiWE_yI6HJV3KZAl_BzQwiSY"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link href='http://fonts.googleapis.com/css?family=Raleway|Montserrat|Lobster' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Raleway|Lato|Exo|Lobster|Lemon' rel='stylesheet' type='text/css'>
 <link href="css/style.css" rel="stylesheet"/>
 <title>TuneTour.me</title>
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
@@ -75,7 +75,7 @@ function listEvents() {
   $("#eventsList").html("getting event detail<br/><img src='img/loading.gif' width='128pt;'/>");
   request.done(function (msg) {
     //$("#bigmapcanvas").show();
-    $("listEventsButton").hide();
+    $("#listEventsButton").hide();
     $("#eventsList").html(msg);
     //processEvents(msg);
   });
@@ -252,7 +252,7 @@ $(document).ready(function () {
 <body>
 <div id="container">
   <div class="section" id="t2t" align="center">
-    <h1 id="siteName">TuneTour.me</h1>
+    <div id="siteName"><h1>TuneTour.me</h1></div>
 
     <div>
       <input id="artistNameInput"/>
