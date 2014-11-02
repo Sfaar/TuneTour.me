@@ -51,7 +51,6 @@ html, body, #container{
 #eventsList {
   background: rgba(0,0,0,.75);
   color: #AA99AA;
-  margin: 12pt 8pt;
   padding: 8pt;
 }
 
@@ -123,14 +122,14 @@ html, body, #container{
 @media screen and (min-width : 980px) {
   #footerdiv {width: 50%;}
   #artistNameInput { width : 50%; }
-  #eventsList { width : 60%; }
-  .hotelDiv {width:19%;}
+  #eventsList { width : 60%; margin: 12pt 8pt; }
+  .hotelDiv {width:17%;}
 }
 @media screen and (max-width: 980px){
   #footerdiv {width: 95%;}
   #artistNameInput{width: 90%;}
   #eventsList { width:95%; }
-  .hotelDiv {width:19%;}
+  .hotelDiv {width:17%;}
 }
 @media screen and (max-width: 600px) {
   #siteName{font-size: 32pt !important;}

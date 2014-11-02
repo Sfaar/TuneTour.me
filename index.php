@@ -95,42 +95,7 @@ function artistsArray2Text(artists) {
 }
 
 function event2Html(event) {
-  var str = ""
-      + "          <div class='event'>"
-      + "          <span class='city'>Some City</span>"
-      + "          <span class='venue'>An Awesome Music Arena</span>"
-      + "          <span class='date'>Date</span>"
-      + "          <div class='placeDetail'>"
-      + "          <span class='region'>Reg,</span>"
-      + "          <span class='country'>Country</span>"
-      + "          </div>"
-      + "          <div class='hotels'>"
-      + "          <div class='hotelDiv'>"
-      + "          <span class='hotelname'>Hotel Name</span>"
-      + "          <img src='img/images.jpg' height='128pt' />"
-      + "          <span class='price'>$99.00</span>"
-      + "          <span class='rating'>8.4<span class='outof'>/10</span></span>"
-      + "          </div>"
-      + "          <div class='hotelDiv'>"
-      + "          <span class='hotelname'>Hotel Name</span>"
-      + "          <img src='img/images.jpg' height='128pt' />"
-      + "          <span class='price'>$99.00</span>"
-      + "          <span class='rating'>8.4<span class='outof'>/10</span></span>"
-      + "          </div>"
-      + "          <div class='hotelDiv'>"
-      + "          <span class='hotelname'>Hotel Name</span>"
-      + "          <img src='img/images.jpg' height='128pt' />"
-      + "          <span class='price'>$99.00</span>"
-      + "          <span class='rating'>8.4<span class='outof'>/10</span></span>"
-      + "          </div>"
-      + "          <div class='clrflt'></div>"
-      + "          </div>"
-      + "          <div class='nearEvents'>"
-      + "          <span class='nearby'>A event</span>"
-      + "          <span class='nearby'>A event</span>"
-      + "          </div>"
-      + "          </div>";
-  return str;
+  return "";
 
 }
 
@@ -256,7 +221,7 @@ $(document).ready(function () {
 
     <div>
       <input id="artistNameInput"/>
-      <button id="artistButton" onclick="artistLookup()">&rarr;</button>
+      <button id="artistButton" onclick="artistLookup()">&crarr;</button>
       <div id="artistLookupResult"></div>
       <button class="loadLater" id="listEventsButton" onclick="listEvents()">tell more about it</button>
     </div>
