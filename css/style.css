@@ -37,7 +37,8 @@ html, body, #container{
   text-align: center;
 }
 #artistButton{
-  background: rgba(128,0,128,.7);;
+  background: rgba(128,0,128,.7);
+  color: lavender;
 }
 
 #artistLookupResult{
