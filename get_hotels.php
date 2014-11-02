@@ -1,5 +1,6 @@
 <div class="bigMapHolder">
-  <div id="bigmapcanvas" onclick="loadBigMap()">click here to show map</div>
+  <div id="bigmapShow" onclick="loadBigMap()">click here for tour map</div>
+  <div id="bigmapcanvas" ></div>
 </div>
 <?php
 set_time_limit(0);
@@ -60,6 +61,7 @@ foreach ($json as $item)
 		<span class="country"><?php echo $item['venue']['country'];?></span>
     </div>
 		<div class="hotels">
+      <span class="hotelsSectionTag">stay around:</span><br />
 		<?php 
 		$url="http://www.priceline.com/api/hotelretail/listing/v3/".$lat.",".$lon."/".$date."/".$next_date."/1/5?offset=0&sort=1";
 		// Initialize the cURL session with the request URL
@@ -107,7 +109,7 @@ foreach ($json as $item)
     <div class='clrflt'></div>
     <div class="hotelsMapContainer">
       <div class="hotelmapmeta" id="hmc<?php echo $bmi;?>meta" onclick="loadHotelMap('hmc<?php echo $bmi;?>')">
-        click here for maps
+        click here for map of nearby hotels
         <span class="hotelMapData" id="hmc<?php echo $bmi;?>dt" style="display: none"><?php echo json_encode($venueMapData); ?></span>
       </div>
       <div class="hotelmapcanvas" id="hmc<?php echo $bmi;?>" >

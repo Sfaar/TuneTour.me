@@ -21,15 +21,19 @@ html, body, #container{
 
 #artistNameInput,#artistButton{
   font-size: 24pt;
-  line-height: 28pt;
+  line-height: 36pt;
   vertical-align: baseline;
+  border: 1px solid rgba(128,0,128,.5);
+  height: 40pt;
 }
 #artistNameInput{
   color: purple;
   padding-left: 8px;
+  background: rgba(255,255,255,.9);
+  text-align: center;
 }
 #artistButton{
-  color: #666;
+  background: rgba(128,0,128,.7);;
 }
 
 #artistLookupResult{
@@ -53,7 +57,8 @@ html, body, #container{
   margin: 8pt 0;
   text-align: left;
 }
-.event a { color: inherit !important;}
+.event a { color: inherit !important; text-decoration: none !important; }
+.event a:hover{ font-style: italic; border-bottom: 1px dotted; }
 .clrflt { clear: both; }
 .event hr{margin: 0; border:none; background: transparent;}
 .city { font-size: 21pt; font-weight: normal; display: inline-block; color: #FFFFFF;
@@ -72,30 +77,12 @@ html, body, #container{
 .price {display: inline; font-size: 9pt;}
 .rating {font-size: 9pt;}
 .outof {font-size: 7pt; color: #777;}
-.nearEvents { font-size: 8pt;}
-.nearby {}
+.nearEvents { font-size: 10pt; margin-top: 9pt;}
+.nearby { font-size: 9pt; padding-right: 3pt; padding-left: 3pt; border-left: 1px solid rgba(64,48,64,.8); }
 
-@media screen and (min-width : 2440px) {
-  body{ zoom: 1.5; }
-}
-@media screen and (min-width: 1200px){
-}
-@media screen and (min-width : 980px) {
-  #artistNameInput { width : 50%; }
-  #eventsList { width : 60%; }
-  .hotelDiv {width:19%;}
-}
-@media screen and (max-width: 980px){
-  #artistNameInput{width: 90%;}
-  #eventsList { width:95%; }
-  .hotelDiv {width:19%;}
-}
-@media screen and (max-width: 600px) {
-  #siteName{font-size: 32pt !important;}
-}
-@media screen and (max-height: 450px) {
-  #siteName{font-size: 32pt !important;}
-}
+.hotelsSectionTag{ font-size: 10pt;}
+#bigmapShow {height: 96px; padding: 24px; line-height:48pt;}
+.hotelmapmeta {height: 36pt; font-size: 12pt; line-height:36pt; text-align: center; }
 #bigmapcanvas,#hotelmapcanvas{
   width: 100%;
 }
@@ -111,4 +98,39 @@ html, body, #container{
   position: relative; /* allows repositioning */
   left: 100%; /* move the whole width of the image to the right */
   margin-left: -128pt; /* magic! */
+}
+
+#listEventsButton {font-size: 16pt; background:rgba(255,255,255,.8); color: #551155; padding-left: 6pt 48pt; border: 1px solid purple;}
+
+#footerdiv{
+  background: rgba(255,255,255,.1);
+  margin: 96pt 0 0 0;
+  padding: 8pt;
+  border-top: 1px solid purple;
+  color: #303;
+}
+#footerdiv a {color: #515; text-decoration: none;}
+
+@media screen and (min-width : 2440px) {
+  body{ zoom: 1.5; }
+}
+@media screen and (min-width: 1200px){
+}
+@media screen and (min-width : 980px) {
+  #footerdiv {width: 50%;}
+  #artistNameInput { width : 50%; }
+  #eventsList { width : 60%; }
+  .hotelDiv {width:19%;}
+}
+@media screen and (max-width: 980px){
+  #footerdiv {width: 95%;}
+  #artistNameInput{width: 90%;}
+  #eventsList { width:95%; }
+  .hotelDiv {width:19%;}
+}
+@media screen and (max-width: 600px) {
+  #siteName{font-size: 32pt !important;}
+}
+@media screen and (max-height: 450px) {
+  #siteName{font-size: 32pt !important;}
 }
