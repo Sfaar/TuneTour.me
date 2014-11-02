@@ -1,19 +1,21 @@
 @import url(http://fonts.googleapis.com/css?family=Raleway);
 html, body, #container{
   color: #303;
-  font-size: 18pt;
+  font-size: 14pt;
   font-family: "Raleway", Helvetica, Arial, Verdana, sans-serif;
 }
 
 #t2t {
   width: 100%;
-  background: url("../img/Paramore_Concert.jpg");
+  background: url("../img/Paramore_Concert.jpg") fixed;
   background-size : cover;
   background-repeat : no-repeat;
   background-position : 50% 20%;
 }
 
 .pp-tableCell, .fp-tableCell  {text-align: center;}
+
+#siteName{ font-size: 48pt; margin-top:10%;}
 
 #artistNameInput,#artistButton{
   font-size: 24pt;
@@ -29,12 +31,41 @@ html, body, #container{
 
 #artistLookupResult{
   padding: 24pt;
+  font-size: 21pt;
+}
+#eventsContainer{
+  margin-top: 128px;
+  width: 100%;
+}
+#eventsList {
+  background: rgba(0,0,0,.75);
+  color: #AA99AA;
+  margin: 12pt 8pt;
+  padding: 8pt;
+  width: 60%;
 }
 
-#eventsList {
-  background: rgba(0,0,0,.8);
-  color: #FFFFFF;
-  margin: 12pt 8pt;
-  border: 1pt solid purple;
-  box-shadow: 0 0 20px purple;
+.event {
+  background: rgba(0,0,0,.75);
+  padding: 8pt;
+  margin: 8pt 0;
+  text-align: left;
 }
+.event a { color: inherit !important;}
+.clrflt { clear: both; }
+.event hr{margin: 0; border:none; background: transparent;}
+.city { font-size: 21pt; font-weight: bold; display: inline-block; color: #a0a; font-family: "Montserrat",sans-serif;}
+.venue {font-size: 16pt; display: inline-block; color: #DD88DD;}
+.date {font-size: 14pt; display: inline-block; color: #DD88DD;}
+.placeDetail {border-top: 1px solid rgba(64,48,64,.8); color: violet;}
+.region { display: inline-block;}
+.country {display: inline-block;}
+.hotels { clear: both;}
+.hotelDiv { float : left; margin: 2pt 8pt 2pt 0;}
+.hotelname { display: block; }
+.hotelDiv img {display: block;}
+.price {display: block; font-size: 12pt;}
+.rating {font-size: 12pt;}
+.outof {font-size: 10pt; color: #777;}
+.nearEvents {}
+.nearby {}
