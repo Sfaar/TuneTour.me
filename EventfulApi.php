@@ -26,7 +26,7 @@ class EventfulApi
 {
    /**
     * The URI of the API
-    * 
+    *
     * @var string
     */
    const API_URL = 'http://api.eventful.com';
@@ -53,7 +53,7 @@ class EventfulApi
    protected $password = null;
 
    /**
-    * The user authentication key 
+    * The user authentication key
     *
     * @var string|null
     */
@@ -71,27 +71,27 @@ class EventfulApi
     *
     * @param string $appKey The Eventful application key that was provided by
     * Eventful to you.
-    * 
+    *
     * @return void
     */
    public function __construct($appKey)
    {
       $this->appKey = $appKey;
    }
-   
+
    /**
     * Returns the application key that was passed into the constructor
-    * 
+    *
     * @return string Returns the Eventful application key.
     */
    public function getAppKey()
    {
       return $this->appKey;
    }
-   
+
    /**
     * Returns the latest response as unserialized data
-    * 
+    *
     * @return string|null Returns a string if a call was made previously or
     * null otherwise.
     */
@@ -109,20 +109,22 @@ class EventfulApi
    public function getResponseAsArray()
    {
     $json = json_decode(json_encode((array) simplexml_load_string($this->response)), 1);
-	foreach($json["events"]["event"] as $event)
-		echo "<span class='nearby'><a href='".$event["url"]."'>".$event["title"]."</a></span>";
+	  foreach($json["events"]["event"] as $event) {
+      if($event !=null && is_array($event) && array_key_exists("url",$event) && array_key_exists("title",$event))
+        echo "<span class='nearby'><a href='" . $event["url"] . "'>" . $event["title"] . "</a></span>";
+    }
    }
 
    /**
     * Attempt to login with a specific user to get user specific API responses
     * from Eventful. You do not need to use this function prior to using the
     * <var>call()</var> method. However, if you want specific user related
-    * responses you will. 
+    * responses you will.
     *
     * @param string $user     The Eventful username
     * @param string $password The Eventful password
-    * 
-    * @return boolean Returns <var>true</var> on successful login or 
+    *
+    * @return boolean Returns <var>true</var> on successful login or
     * <var>false</var> otherwise.
     */
    public function login($user, $password)
@@ -137,14 +139,14 @@ class EventfulApi
       {
          return false;
       }
-      
+
       // Get response
       $response = $this->getResponseAsArray();
       if (!isset($response['nonce']))
       {
          return false;
       }
-      
+
       // Get nonce
       $nonce = $response['nonce'];
 
@@ -161,7 +163,7 @@ class EventfulApi
       {
          return false;
       }
-      
+
       // Get response
       $response = $this->getResponseAsArray();
       if (!isset($response['user_key']))
@@ -177,14 +179,14 @@ class EventfulApi
 
    /**
     * Call a method on the Eventful API.  To get the actual response from an
-    * API call you will need to call the function 
+    * API call you will need to call the function
     * <var>getResponseAsArray()</var> or <var>getResponseAsString()</var>
     * after calling this function.
     *
     * @param string $method The API method (e.g. "events/search")
     * @param array  $args   An optional associative array of arguments to pass
     *                       to the API.
-    * 
+    *
     * @return boolean Returns <var>true</var> on success or <var>false</var>
     * otherwise.
     */
@@ -195,12 +197,12 @@ class EventfulApi
 
       // Construct the URL that corresponds to the method.
       $url = self::API_URL . '/rest/' . $method;
-      
+
       // Add items to the arguments array
       $args['app_key'] = $this->appKey;
       $args['user'] = $this->user;
       $args['user_key'] = $this->userKey;
-      
+
       // Make web request
       $this->response = $this->curl($url, $args);
 
@@ -210,7 +212,7 @@ class EventfulApi
          return false;
       }
 
-      // Process the response XML through SimpleXML      
+      // Process the response XML through SimpleXML
       $xmlElement = new SimpleXMLElement($this->response);
 
       // Check for call-specific error messages
@@ -221,20 +223,20 @@ class EventfulApi
 
       return true;
    }
-   
+
    /**
     * Attempts to make a POST cURL to the specified URL with the payload being
     * the params passed in.
-    * 
-    * @param string $url  The URL to make a web request to.    
+    *
+    * @param string $url  The URL to make a web request to.
     * @param array  $args An optional array of key/value pairs to pass to the
     *                     API.
-    * 
+    *
     * @return string|false Returns the content returned from the web request
     * on success or <var>false</var> on failure.
     */
    protected function curl($url, $args = array())
-   {      
+   {
       // Open connection
       $ch = curl_init();
 

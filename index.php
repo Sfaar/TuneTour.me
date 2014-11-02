@@ -8,6 +8,7 @@
   <link href='http://fonts.googleapis.com/css?family=Raleway|Montserrat' rel='stylesheet' type='text/css'>
   <link href="css/style.css" rel="stylesheet"/>
   <title>TuneTour.me</title>
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
   <script src="http://code.jquery.com/jquery-1.11.0.js"></script>
   <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css"/>
   <script src="js/jquery.easings.min.js"></script>
@@ -72,7 +73,7 @@
       $("#eventsList").show();
       $("#eventsList").html("getting event detail<br/><img src='img/loading.gif' width='128pt;'/>");
       request.done(function (msg) {
-        //$("#res").html(msg);
+        //$("#bigmapcanvas").show();
         $("#eventsList").html(msg);
         //processEvents(msg);
       });
@@ -154,6 +155,33 @@
       });
     };
 
+    /* Google Map JavaScript */
+    function setMarkers(map, locations) {
+      for (var i = 0; i < locations.length; i++) {
+        var beach = locations[i];
+        var myLatLng = new google.maps.LatLng(beach[1], beach[2]);
+        var marker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+          title: beach[0],
+          zIndex: beach[3]
+        });
+      }
+    }
+
+    function loadBigMap(){
+      $("#bigmapcanvas").height(500);
+      var bigMapDataText = $("#bigMapData").text();
+      var bmMarkers = JSON.parse(bigMapDataText);
+      clatt = bmMarkers[0][1];
+      clang = bmMarkers[0][2];
+      var mapOptions = {
+        zoom: 2,
+        center: new google.maps.LatLng(clatt, clang)
+      }
+      var map = new google.maps.Map(document.getElementById('bigmapcanvas'),mapOptions);
+      setMarkers(map, bmMarkers);
+    }
     //use it:
     $(document).ready(function () {
       $("#artistNameInput").val("").Watermark("enter artist's name", "#ccc");
@@ -187,7 +215,7 @@
       <div class="loadLater" id="eventsList"></div>
     </div>
     <footer>
-      
+
     </footer>
   </div>
 </div>

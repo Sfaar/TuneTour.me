@@ -1,3 +1,6 @@
+<div class="bigMapHolder">
+  <div id="bigmapcanvas" onclick="loadBigMap()">click here to show map</div>
+</div>
 <?php
 /**
  * Created by PhpStorm.
@@ -34,6 +37,8 @@ $json = json_decode($response, true);
 
 //echo $response;
 curl_close($session);
+$bigMapData = array();
+$bmi = 1;
 foreach ($json as $item)
 {
 	$dates  = explode("T", $item['datetime']);
@@ -41,9 +46,12 @@ foreach ($json as $item)
 	$next_date = date('Ymd', strtotime($dates[0] .' +1 day'));
 	$lon = $item['venue']['longitude'];
 	$lat = $item['venue']['latitude'];
+  $cityName = $item['venue']['city'];
+  $bigMapData[] = [$cityName, $lat, $lon, $bmi];
+  $bmi++;
 ?>	
 	<div class="event">
-		<span class="city"><?php echo $item['venue']['city'];?></span>
+		<span class="city"><?php echo $cityName; ?></span>
 		<span class="venue"><a href="<?php echo $item['venue']['url'];?>"><?php echo $item['venue']['name'];?></a></span>
 		<span class="date"><?php echo date('jS F, Y', strtotime($dates[0]));?></span>
 		<hr />
@@ -101,7 +109,7 @@ foreach ($json as $item)
 		$args = array(
 			'location' => $loc,
 			'date' => $eventDate,
-			'within' => '5'
+			'within' => '10'
 		);
 		$isSuccessful = $eventfulApi->call('events/search', $args);
 		if ($isSuccessful)		{
@@ -110,11 +118,17 @@ foreach ($json as $item)
 		?>
 		</div>
 </div>
-<?php	
-	
-	//echo $response;
+<?php
 }
-
 // Close the cURL session
 
 ?>
+<script type="application/javascript">
+  function initBigMap(){
+    var map = new google.maps.Map(document.getElementById('bigMapCanvas'));
+    var bmMarkers = <?php echo json_encode($bigMapData); ?>
+    setMarkers(map, bmMarkers);
+  }
+</script>
+
+<span id="bigMapData" style="display: none;"><?php echo json_encode($bigMapData); ?></span>

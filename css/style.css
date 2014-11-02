@@ -94,7 +94,9 @@ html, body, #container{
 @media screen and (max-height: 450px) {
   #siteName{font-size: 32pt !important;}
 }
-
+#bigmapcanvas{
+  width: 100%;
+}
 .imgcont1 {
   display: inline-block;
   height: 30px;
