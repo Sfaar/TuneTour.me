@@ -169,18 +169,44 @@
       }
     }
 
+    /* Google Map JavaScript */
+    function setMarkers2(map, locations) {
+      for (var i = 0; i < locations.length; i++) {
+        var beach = locations[i];
+        var myLatLng = new google.maps.LatLng(beach[1], beach[2]);
+        var contentString = beach[4];
+        contentString = replaceAll('%2q%','"',contentString);
+        var infowindow = new google.maps.InfoWindow({
+          content: contentString
+        });
+        var marker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+          title: beach[0],
+          zIndex: beach[3]
+        });
+        google.maps.event.addListener(marker, 'click', function() {
+          infowindow.open(map,marker);
+        });
+      }
+    }
+
     function loadBigMap(){
       $("#bigmapcanvas").height(500);
       var bigMapDataText = $("#bigMapData").text();
-      var bmMarkers = JSON.parse(bigMapDataText);
-      clatt = bmMarkers[0][1];
-      clang = bmMarkers[0][2];
+      var locations = JSON.parse(bigMapDataText);
+      clatt = locations[0][1];
+      clang = locations[0][2];
       var mapOptions = {
         zoom: 2,
         center: new google.maps.LatLng(clatt, clang)
       }
       var map = new google.maps.Map(document.getElementById('bigmapcanvas'),mapOptions);
-      setMarkers(map, bmMarkers);
+      setMarkers(map, locations);
+    }
+
+    function replaceAll(find, replace, str) {
+      return str.replace(new RegExp(find, 'g'), replace);
     }
 
     function loadHotelMap(elemName){
@@ -189,16 +215,16 @@
       metaSelector = "#"+elemName+"meta";
       $(elemSelector).height(250);
       var mapData = $(dtName).text();
-      var markers = JSON.parse(mapData);
+      var locations = JSON.parse(mapData);
       $(metaSelector).hide();
-      clatt = markers[0][1];
-      clang = markers[0][2];
+      clatt = locations[0][1];
+      clang = locations[0][2];
       var mapOptions = {
         zoom: 12,
         center: new google.maps.LatLng(clatt, clang)
       }
       var map = new google.maps.Map(document.getElementById(elemName),mapOptions);
-      setMarkers(map, markers);
+      setMarkers2(map, locations);
     }
 
     //use it:

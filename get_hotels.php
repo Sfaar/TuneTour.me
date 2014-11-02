@@ -84,7 +84,10 @@ foreach ($json as $item)
 		foreach ($json['hotels'] as $item)
 		{
 			$i++;
-      $venueMapData[] = [$item['hotelName'], $item['lat'], $item['lon'], $i];
+      $info = '<div><img src=%2q%'.$item['thumbnailURL'].'%2q%><br><b>'.$item['hotelName'].'</b><br>'.round(floatval($item['overallRatingScore']), 2).'/10 | '.$item['currencyCode'].' '.round($item['merchPrice'],0).'</div>';
+      $info = htmlspecialchars($info);
+
+      $venueMapData[] = [$item['hotelName'], $item['lat'], $item['lon'], $i, $info];
 		?>
 			<div class="hotelDiv">
 				<div class="imgcont"><img src="<?php echo $item['thumbnailURL'];?>" width="48px" /></div>
