@@ -252,7 +252,7 @@ $(document).ready(function () {
 <body>
 <div id="container">
   <div class="section" id="t2t" align="center">
-    <div id="siteName"><img src="img/tt.png" height="80pt"><br/><h1>TuneTour.me</h1></div>
+    <div id="siteName"><img src="img/tt.png" height="160pt"><br/><h1>TuneTour.me</h1></div>
 
     <div>
       <input id="artistNameInput"/>

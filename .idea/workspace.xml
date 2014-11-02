@@ -4,7 +4,6 @@
     <list default="true" id="84edb459-6235-410c-963c-a21ee2cf843a" name="Default" comment="">
       <change type="DELETED" beforePath="N:\SkyDrive\src\Tail2Tune\index2.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
     </list>
     <ignored path="Tail2Tune.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,11 +35,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.685185" vertical-offset="3419" max-vertical-offset="4284">
-              <caret line="254" column="63" selection-start-line="254" selection-start-column="63" selection-end-line="254" selection-end-column="63" />
+            <state vertical-scroll-proportion="0.29248554" vertical-offset="3419" max-vertical-offset="4284">
+              <caret line="254" column="56" selection-start-line="254" selection-start-column="56" selection-end-line="254" selection-end-column="56" />
               <folding>
                 <element signature="e#3515#5271#0#HTML" expanded="false" />
               </folding>
@@ -66,10 +65,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.43883276" vertical-offset="0" max-vertical-offset="2465">
+            <state vertical-scroll-proportion="-13.964286" vertical-offset="0" max-vertical-offset="2465">
               <caret line="23" column="36" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
               <folding />
             </state>
@@ -329,16 +328,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.685185" vertical-offset="3419" max-vertical-offset="4284">
-          <caret line="254" column="63" selection-start-line="254" selection-start-column="63" selection-end-line="254" selection-end-column="63" />
-          <folding>
-            <element signature="e#3515#5271#0#HTML" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/get_hotels.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-67.19231" vertical-offset="38" max-vertical-offset="2550">
@@ -357,9 +346,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43883276" vertical-offset="0" max-vertical-offset="2465">
+        <state vertical-scroll-proportion="-13.964286" vertical-offset="0" max-vertical-offset="2465">
           <caret line="23" column="36" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.29248554" vertical-offset="3419" max-vertical-offset="4284">
+          <caret line="254" column="56" selection-start-line="254" selection-start-column="56" selection-end-line="254" selection-end-column="56" />
+          <folding>
+            <element signature="e#3515#5271#0#HTML" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
