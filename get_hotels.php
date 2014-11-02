@@ -53,7 +53,7 @@ foreach ($json as $item)
     </div>
 		<div class="hotels">
 		<?php 
-		$url="http://www.priceline.com/api/hotelretail/listing/v3/".$lat.",".$lon."/".$date."/".$next_date."/1/50?offset=0&sort=1";
+		$url="http://www.priceline.com/api/hotelretail/listing/v3/".$lat.",".$lon."/".$date."/".$next_date."/1/5?offset=0&sort=1";
 		// Initialize the cURL session with the request URL
 		$session = curl_init($url);
 
@@ -79,11 +79,11 @@ foreach ($json as $item)
 			<div class="hotelDiv">
 				<span class="hotelname"><a href="<?php echo 'http://www.priceline.com/hotel/hotelOverviewGuide.do?propID='.$item['pclnHotelID'];?>"><?php echo $item['hotelName'];?></a></span>
 				<img src="<?php echo $item['thumbnailURL'];?>" height="128pt" />
-				<span class="price"><?php echo $item['currencyCode']." ".$item['merchPrice'];?></span>
+				<span class="price"><?php echo $item['currencyCode']." ".round($item['merchPrice'],0);?></span>
 				<span class="rating"><?php echo round(floatval($item['overallRatingScore']), 2);?><span class="outof">/10</span></span>
 			</div>
 		<?php 
-			if($i == 3)
+			if($i == 5)
 				break;
 		} 
 		?>
@@ -100,14 +100,14 @@ foreach ($json as $item)
 			'date' => $eventDate,
 			'within' => '10'
 		);
-		$isSuccessful = $eventfulApi->call('events/search', $args);
-		if ($isSuccessful)
+		//$isSuccessful = $eventfulApi->call('events/search', $args);
+		//if ($isSuccessful)
 		{
 			// Output the response as a string
 			//echo $eventfulApi->getResponseAsString();
    
 			// Output the response as an array
-			$eventfulApi->getResponseAsArray();
+			//$eventfulApi->getResponseAsArray();
 		}
 		?>
 		</div>
