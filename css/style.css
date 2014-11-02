@@ -24,6 +24,7 @@ html, body, #container{
 }
 #artistNameInput{
   color: purple;
+  padding-left: 8px;
 }
 #artistButton{
   color: #666;
@@ -42,7 +43,6 @@ html, body, #container{
   color: #AA99AA;
   margin: 12pt 8pt;
   padding: 8pt;
-  width: 60%;
 }
 
 .event {
@@ -54,18 +54,41 @@ html, body, #container{
 .event a { color: inherit !important;}
 .clrflt { clear: both; }
 .event hr{margin: 0; border:none; background: transparent;}
-.city { font-size: 21pt; font-weight: bold; display: inline-block; color: #a0a; font-family: "Montserrat",sans-serif;}
-.venue {font-size: 16pt; display: inline-block; color: #DD88DD;}
-.date {font-size: 14pt; display: inline-block; color: #DD88DD;}
-.placeDetail {border-top: 1px solid rgba(64,48,64,.8); color: violet;}
-.region { display: inline-block;}
+.city { font-size: 21pt; font-weight: normal; display: inline-block; color: #FFFFFF;
+  margin-right: 8px;}
+.venue {font-size: 16pt; display: inline-block; color: linen;
+  margin-right: 8px; padding-left: 8px; border-left: 1px solid rgba(64,48,64,.8);}
+.date {font-size: 14pt; display: inline-block; color: linen; border-left: 1px solid rgba(64,48,64,.8); padding-left: 8px;}
+.placeDetail {border-top: 1px solid rgba(64,48,64,.8); color: linen;}
+.region { display: inline-block; margin-bottom: 12pt;}
 .country {display: inline-block;}
 .hotels { clear: both;}
-.hotelDiv { float : left; margin: 2pt 8pt 2pt 0;}
-.hotelname { display: block; }
+.hotelDiv { float : left; margin: 2pt 8pt 2pt 0; width:160px; }
+.hotelname { display: inline; }
 .hotelDiv img {display: block;}
 .price {display: block; font-size: 12pt;}
 .rating {font-size: 12pt;}
 .outof {font-size: 10pt; color: #777;}
 .nearEvents {}
 .nearby {}
+
+@media screen and (min-width : 2440px) {
+  body{ zoom: 1.5; }
+}
+@media screen and (min-width: 1200px){
+}
+@media screen and (min-width : 980px) {
+  #artistNameInput { width : 50%; }
+  #eventsList { width : 900px; }
+}
+@media screen and (max-width: 980px){
+  #artistNameInput{width: 90%;}
+  #eventsList { width:95%; }
+  .hotelDiv {width:21%;}
+}
+@media screen and (max-width: 600px) {
+  #siteName{font-size: 32pt !important;}
+}
+@media screen and (max-height: 450px) {
+  #siteName{font-size: 32pt !important;}
+}

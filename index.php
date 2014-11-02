@@ -7,11 +7,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <link href='http://fonts.googleapis.com/css?family=Raleway|Montserrat' rel='stylesheet' type='text/css'>
   <link href="css/style.css" rel="stylesheet"/>
-  <title>Tail2Tune</title>
-
-  <style>
-    .event span { padding : 4px 8px; }
-  </style>
+  <title>TuneTour.me</title>
   <script src="http://code.jquery.com/jquery-1.11.0.js"></script>
   <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css"/>
   <script src="js/jquery.easings.min.js"></script>
@@ -73,10 +69,10 @@
         type: "GET",
         dataType: "text"
       });
-      $("#eventsList").html("Getting ");
+      $("#eventsList").show();
+      $("#eventsList").html("getting event detail");
       request.done(function (msg) {
         //$("#res").html(msg);
-        $("#eventsList").show();
         $("#eventsList").html(msg);
         //processEvents(msg);
       });
@@ -165,7 +161,7 @@
         artistLookup();
       });
       $(".loadLater").hide();
-//      $("#res").hide();
+      $("#res").hide();
       $('#container').fullpage({
         anchors: [],
         autoScrolling: false,
@@ -180,7 +176,7 @@
 <body>
 <div id="container">
   <div class="section" id="t2t" align="center">
-    <h1 id="siteName">Tail2Tune</h1>
+    <h1 id="siteName">TuneTour.me</h1>
 
     <div>
       <input id="artistNameInput"/>
