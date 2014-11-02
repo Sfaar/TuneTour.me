@@ -21,6 +21,7 @@ html, body, #container{
   line-height: 80pt;
   vertical-align: middle;
 }
+#siteName img {display: inline-block;}
 #siteName h1 {font-size: 48pt; display: inline-block; vertical-align: baseline}
 #artistNameInput,#artistButton{
   font-size: 24pt;
@@ -106,8 +107,8 @@ html, body, #container{
 #listEventsButton {font-size: 16pt; background:rgba(255,255,255,.8); color: #551155; padding-left: 6pt 48pt; border: 1px solid purple;}
 
 #footerdiv{
-  background: rgba(255,255,255,.1);
-  margin: 96pt 0 0 0;
+  background: rgba(255,255,255,.3);
+  margin: 96pt 0;
   padding: 8pt;
   border-top: 1px solid purple;
   color: #303;

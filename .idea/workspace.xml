@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="84edb459-6235-410c-963c-a21ee2cf843a" name="Default" comment="">
       <change type="DELETED" beforePath="N:\SkyDrive\src\Tail2Tune\index2.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EventfulApi.php" afterPath="$PROJECT_DIR$/EventfulApi.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
     </list>
@@ -41,7 +40,7 @@
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-4.685185" vertical-offset="3419" max-vertical-offset="4284">
-              <caret line="254" column="23" selection-start-line="254" selection-start-column="23" selection-end-line="254" selection-end-column="23" />
+              <caret line="254" column="63" selection-start-line="254" selection-start-column="63" selection-end-line="254" selection-end-column="63" />
               <folding>
                 <element signature="e#3515#5271#0#HTML" expanded="false" />
               </folding>
@@ -70,8 +69,8 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.36251402" vertical-offset="0" max-vertical-offset="2448">
-              <caret line="19" column="17" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
+            <state vertical-scroll-proportion="0.43883276" vertical-offset="0" max-vertical-offset="2465">
+              <caret line="23" column="36" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -98,8 +97,8 @@
         <option value="$PROJECT_DIR$/sites.xml" />
         <option value="$PROJECT_DIR$/get_hotels.php" />
         <option value="$PROJECT_DIR$/EventfulApi.php" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/css/style.css" />
+        <option value="$PROJECT_DIR$/index.php" />
       </list>
     </option>
   </component>
@@ -333,7 +332,7 @@
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.685185" vertical-offset="3419" max-vertical-offset="4284">
-          <caret line="254" column="23" selection-start-line="254" selection-start-column="23" selection-end-line="254" selection-end-column="23" />
+          <caret line="254" column="63" selection-start-line="254" selection-start-column="63" selection-end-line="254" selection-end-column="63" />
           <folding>
             <element signature="e#3515#5271#0#HTML" expanded="false" />
           </folding>
@@ -358,8 +357,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36251402" vertical-offset="0" max-vertical-offset="2448">
-          <caret line="19" column="17" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.43883276" vertical-offset="0" max-vertical-offset="2465">
+          <caret line="23" column="36" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
           <folding />
         </state>
       </provider>
