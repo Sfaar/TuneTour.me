@@ -77,10 +77,13 @@ foreach ($json as $item)
 			$i++;
 		?>
 			<div class="hotelDiv">
-				<span class="hotelname"><a href="<?php echo 'http://www.priceline.com/hotel/hotelOverviewGuide.do?propID='.$item['pclnHotelID'];?>"><?php echo $item['hotelName'];?></a></span>
-				<img src="<?php echo $item['thumbnailURL'];?>" height="128pt" />
-				<span class="price"><?php echo $item['currencyCode']." ".round($item['merchPrice'],0);?></span>
-				<span class="rating"><?php echo round(floatval($item['overallRatingScore']), 2);?><span class="outof">/10</span></span>
+				<div class="imgcont"><img src="<?php echo $item['thumbnailURL'];?>" width="48px" /></div>
+        <div>
+          <span class="hotelname"><a href="<?php echo 'http://www.priceline.com/hotel/hotelOverviewGuide.do?propID='.$item['pclnHotelID'];?>"><?php echo $item['hotelName'];?></a></span>
+          <br/>
+          <span class="price"><?php echo $item['currencyCode']." ".round($item['merchPrice'],0);?><small>/night</small></span>
+				  <span class="rating"> (<small>rating:</small><?php echo round(floatval($item['overallRatingScore']), 2);?><span class="outof">/10</span>)</span>
+        </div>
 			</div>
 		<?php 
 			if($i == 5)
@@ -98,16 +101,11 @@ foreach ($json as $item)
 		$args = array(
 			'location' => $loc,
 			'date' => $eventDate,
-			'within' => '10'
+			'within' => '5'
 		);
-		//$isSuccessful = $eventfulApi->call('events/search', $args);
-		//if ($isSuccessful)
-		{
-			// Output the response as a string
-			//echo $eventfulApi->getResponseAsString();
-   
-			// Output the response as an array
-			//$eventfulApi->getResponseAsArray();
+		$isSuccessful = $eventfulApi->call('events/search', $args);
+		if ($isSuccessful)		{
+      $eventfulApi->getResponseAsArray();
 		}
 		?>
 		</div>

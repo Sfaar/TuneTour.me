@@ -70,7 +70,7 @@
         dataType: "text"
       });
       $("#eventsList").show();
-      $("#eventsList").html("getting event detail");
+      $("#eventsList").html("getting event detail<br/><img src='img/loading.gif' width='128pt;'/>");
       request.done(function (msg) {
         //$("#res").html(msg);
         $("#eventsList").html(msg);
@@ -177,7 +177,6 @@
 <div id="container">
   <div class="section" id="t2t" align="center">
     <h1 id="siteName">TuneTour.me</h1>
-
     <div>
       <input id="artistNameInput"/>
       <button id="artistButton" onclick="artistLookup()">&rarr;</button>
@@ -187,6 +186,9 @@
     <div id="eventsContainer" align="center">
       <div class="loadLater" id="eventsList"></div>
     </div>
+    <footer>
+      
+    </footer>
   </div>
 </div>
 <div id="res"></div>

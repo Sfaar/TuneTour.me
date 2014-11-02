@@ -46,7 +46,7 @@ html, body, #container{
 }
 
 .event {
-  background: rgba(0,0,0,.75);
+  background: rgba(0,0,0,.5);
   padding: 8pt;
   margin: 8pt 0;
   text-align: left;
@@ -63,13 +63,14 @@ html, body, #container{
 .region { display: inline-block; margin-bottom: 12pt;}
 .country {display: inline-block;}
 .hotels { clear: both;}
-.hotelDiv { float : left; margin: 2pt 8pt 2pt 0; width:160px; }
-.hotelname { display: inline; }
-.hotelDiv img {display: block;}
-.price {display: block; font-size: 12pt;}
-.rating {font-size: 12pt;}
-.outof {font-size: 10pt; color: #777;}
-.nearEvents {}
+.hotelDiv { margin: 2pt 8pt 2pt 0; width:160px; float: left; }
+.hotelDiv div {float: left;}
+.hotelname { font-size: 10pt; }
+.imgcont { width: 100%;}
+.price {display: inline; font-size: 9pt;}
+.rating {font-size: 9pt;}
+.outof {font-size: 7pt; color: #777;}
+.nearEvents { font-size: 8pt;}
 .nearby {}
 
 @media screen and (min-width : 2440px) {
@@ -79,16 +80,31 @@ html, body, #container{
 }
 @media screen and (min-width : 980px) {
   #artistNameInput { width : 50%; }
-  #eventsList { width : 900px; }
+  #eventsList { width : 60%; }
+  .hotelDiv {width:19%;}
 }
 @media screen and (max-width: 980px){
   #artistNameInput{width: 90%;}
   #eventsList { width:95%; }
-  .hotelDiv {width:21%;}
+  .hotelDiv {width:19%;}
 }
 @media screen and (max-width: 600px) {
   #siteName{font-size: 32pt !important;}
 }
 @media screen and (max-height: 450px) {
   #siteName{font-size: 32pt !important;}
+}
+
+.imgcont1 {
+  display: inline-block;
+  height: 30px;
+  width: 90%;
+  text-align: center; /* ensures the image is always in the h-middle */
+  overflow: hidden; /* hide the cropped portion */
+}
+
+.imgcont1 img {
+  position: relative; /* allows repositioning */
+  left: 100%; /* move the whole width of the image to the right */
+  margin-left: -128pt; /* magic! */
 }
