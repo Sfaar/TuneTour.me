@@ -2,6 +2,7 @@
   <div id="bigmapcanvas" onclick="loadBigMap()">click here to show map</div>
 </div>
 <?php
+set_time_limit(0);
 /**
  * Created by PhpStorm.
  * User: nafSadh and amitav
@@ -48,7 +49,6 @@ foreach ($json as $item)
 	$lat = $item['venue']['latitude'];
   $cityName = $item['venue']['city'];
   $bigMapData[] = [$cityName, $lat, $lon, $bmi];
-  $bmi++;
 ?>	
 	<div class="event">
 		<span class="city"><?php echo $cityName; ?></span>
@@ -78,11 +78,13 @@ foreach ($json as $item)
 
 		$json = json_decode($response, true);
 		curl_close($session);
-		
+
+    $venueMapData = array();
 		$i = 0;
 		foreach ($json['hotels'] as $item)
 		{
 			$i++;
+      $venueMapData[] = [$item['hotelName'], $item['lat'], $item['lon'], $i];
 		?>
 			<div class="hotelDiv">
 				<div class="imgcont"><img src="<?php echo $item['thumbnailURL'];?>" width="48px" /></div>
@@ -100,6 +102,14 @@ foreach ($json as $item)
 		?>
 		</div>
     <div class='clrflt'></div>
+    <div class="hotelsMapContainer">
+      <div class="hotelmapmeta" id="hmc<?php echo $bmi;?>meta" onclick="loadHotelMap('hmc<?php echo $bmi;?>')">
+        click here for maps
+        <span class="hotelMapData" id="hmc<?php echo $bmi;?>dt" style="display: none"><?php echo json_encode($venueMapData); ?></span>
+      </div>
+      <div class="hotelmapcanvas" id="hmc<?php echo $bmi;?>" >
+      </div>
+    </div>
 		<div class="nearEvents">
       nearby events: 
 		<?php
@@ -119,6 +129,7 @@ foreach ($json as $item)
 		</div>
 </div>
 <?php
+  $bmi++;
 }
 // Close the cURL session
 

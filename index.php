@@ -5,7 +5,7 @@
   <meta name="google-site-verification" content="xbuRNTGkdLHrkm1w367xiWE_yI6HJV3KZAl_BzQwiSY"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <link href='http://fonts.googleapis.com/css?family=Raleway|Montserrat' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Raleway|Montserrat|Lobster' rel='stylesheet' type='text/css'>
   <link href="css/style.css" rel="stylesheet"/>
   <title>TuneTour.me</title>
   <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
@@ -182,6 +182,25 @@
       var map = new google.maps.Map(document.getElementById('bigmapcanvas'),mapOptions);
       setMarkers(map, bmMarkers);
     }
+
+    function loadHotelMap(elemName){
+      dtName = "#"+elemName+"dt";
+      elemSelector = "#"+elemName;
+      metaSelector = "#"+elemName+"meta";
+      $(elemSelector).height(250);
+      var mapData = $(dtName).text();
+      var markers = JSON.parse(mapData);
+      $(metaSelector).hide();
+      clatt = markers[0][1];
+      clang = markers[0][2];
+      var mapOptions = {
+        zoom: 12,
+        center: new google.maps.LatLng(clatt, clang)
+      }
+      var map = new google.maps.Map(document.getElementById(elemName),mapOptions);
+      setMarkers(map, markers);
+    }
+
     //use it:
     $(document).ready(function () {
       $("#artistNameInput").val("").Watermark("enter artist's name", "#ccc");

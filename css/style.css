@@ -1,6 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Raleway);
 html, body, #container{
-  color: #303;
+  color: #515;
   font-size: 14pt;
   font-family: "Raleway", Helvetica, Arial, Verdana, sans-serif;
 }
@@ -15,7 +15,9 @@ html, body, #container{
 
 .pp-tableCell, .fp-tableCell  {text-align: center;}
 
-#siteName{ font-size: 48pt; margin-top:10%;}
+#siteName{ font-size: 48pt; margin-top:10%; font-family: "Lobster", sans-serif;
+
+}
 
 #artistNameInput,#artistButton{
   font-size: 24pt;
@@ -94,7 +96,7 @@ html, body, #container{
 @media screen and (max-height: 450px) {
   #siteName{font-size: 32pt !important;}
 }
-#bigmapcanvas{
+#bigmapcanvas,#hotelmapcanvas{
   width: 100%;
 }
 .imgcont1 {

@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="84edb459-6235-410c-963c-a21ee2cf843a" name="Default" comment="">
       <change type="DELETED" beforePath="N:\SkyDrive\src\Tail2Tune\index2.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EventfulApi.php" afterPath="$PROJECT_DIR$/EventfulApi.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/get_hotels.php" afterPath="$PROJECT_DIR$/get_hotels.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
@@ -39,38 +38,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.41769317" vertical-offset="1735" max-vertical-offset="3111">
-              <caret line="172" column="35" selection-start-line="172" selection-start-column="35" selection-end-line="172" selection-end-column="35" />
+            <state vertical-scroll-proportion="-20.576923" vertical-offset="2151" max-vertical-offset="3604">
+              <caret line="196" column="16" selection-start-line="196" selection-start-column="16" selection-end-line="196" selection-end-column="16" />
               <folding>
-                <element signature="e#3735#5639#0#HTML" expanded="false" />
-                <element signature="e#5674#5989#0#HTML" expanded="false" />
+                <element signature="e#3743#5647#0#HTML" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="get_hotels.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="get_hotels.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/get_hotels.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.3148148" vertical-offset="0" max-vertical-offset="2278">
-              <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
+            <state vertical-scroll-proportion="0.13409092" vertical-offset="1259" max-vertical-offset="2465">
+              <caret line="86" column="77" selection-start-line="86" selection-start-column="77" selection-end-line="86" selection-end-column="77" />
               <folding>
+                <element signature="e#136#231#0#PHP" expanded="false" />
+                <element signature="n#style#0;n#span#0;n#div#0;n#div#3;n#div#1;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EventfulApi.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/EventfulApi.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="31.518518" vertical-offset="3606" max-vertical-offset="4471">
-              <caret line="112" column="41" selection-start-line="112" selection-start-column="41" selection-end-line="112" selection-end-column="41" />
-              <folding>
-                <element signature="e#6#336#0#PHP" expanded="true" />
+                <marker date="1414914796207" expanded="true" signature="2687:2740" placeholder="..." />
+                <marker date="1414914796207" expanded="true" signature="2795:2850" placeholder="..." />
+                <marker date="1414914796207" expanded="true" signature="3824:3869" placeholder="..." />
+                <marker date="1414914796207" expanded="true" signature="4306:4390" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -79,8 +71,8 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-19.071428" vertical-offset="1098" max-vertical-offset="1989">
-              <caret line="96" column="14" selection-start-line="96" selection-start-column="14" selection-end-line="96" selection-end-column="14" />
+            <state vertical-scroll-proportion="-19.071428" vertical-offset="1132" max-vertical-offset="2023">
+              <caret line="98" column="15" selection-start-line="98" selection-start-column="15" selection-end-line="98" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -106,9 +98,9 @@
         <option value="$PROJECT_DIR$/a.html" />
         <option value="$PROJECT_DIR$/sites.xml" />
         <option value="$PROJECT_DIR$/EventfulApi.php" />
-        <option value="$PROJECT_DIR$/get_hotels.php" />
         <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/get_hotels.php" />
       </list>
     </option>
   </component>
@@ -245,6 +237,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296875" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -256,7 +249,6 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -292,8 +284,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="3213" max-vertical-offset="3451">
           <caret line="189" column="6" selection-start-line="189" selection-start-column="6" selection-end-line="189" selection-end-column="6" />
           <folding>
-            <element signature="e#3735#5639#0#HTML" expanded="false" />
-            <element signature="e#5674#5989#0#HTML" expanded="false" />
+            <element signature="e#3743#5647#0#HTML" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -303,7 +294,13 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2210">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="e#136#231#0#PHP" expanded="false" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#3;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <marker date="1414914796207" expanded="true" signature="2687:2740" placeholder="..." />
+            <marker date="1414914796207" expanded="true" signature="2795:2850" placeholder="..." />
+            <marker date="1414914796207" expanded="true" signature="3824:3869" placeholder="..." />
+            <marker date="1414914796207" expanded="true" signature="4306:4390" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -324,9 +321,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-19.071428" vertical-offset="1132" max-vertical-offset="2023">
+          <caret line="98" column="15" selection-start-line="98" selection-start-column="15" selection-end-line="98" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/EventfulApi.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="31.518518" vertical-offset="3606" max-vertical-offset="4471">
+        <state vertical-scroll-proportion="0.19306359" vertical-offset="1737" max-vertical-offset="4471">
           <caret line="112" column="41" selection-start-line="112" selection-start-column="41" selection-end-line="112" selection-end-column="41" />
           <folding>
             <element signature="e#6#336#0#PHP" expanded="true" />
@@ -334,31 +339,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/get_hotels.php">
+    <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.3148148" vertical-offset="0" max-vertical-offset="2278">
-          <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
+        <state vertical-scroll-proportion="-20.576923" vertical-offset="2151" max-vertical-offset="3604">
+          <caret line="196" column="16" selection-start-line="196" selection-start-column="16" selection-end-line="196" selection-end-column="16" />
           <folding>
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="e#3743#5647#0#HTML" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/style.css">
+    <entry file="file://$PROJECT_DIR$/get_hotels.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-19.071428" vertical-offset="1098" max-vertical-offset="1989">
-          <caret line="96" column="14" selection-start-line="96" selection-start-column="14" selection-end-line="96" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41769317" vertical-offset="1735" max-vertical-offset="3111">
-          <caret line="172" column="35" selection-start-line="172" selection-start-column="35" selection-end-line="172" selection-end-column="35" />
+        <state vertical-scroll-proportion="0.13409092" vertical-offset="1259" max-vertical-offset="2465">
+          <caret line="86" column="77" selection-start-line="86" selection-start-column="77" selection-end-line="86" selection-end-column="77" />
           <folding>
-            <element signature="e#3735#5639#0#HTML" expanded="false" />
-            <element signature="e#5674#5989#0#HTML" expanded="false" />
+            <element signature="e#136#231#0#PHP" expanded="false" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#3;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <marker date="1414914796207" expanded="true" signature="2687:2740" placeholder="..." />
+            <marker date="1414914796207" expanded="true" signature="2795:2850" placeholder="..." />
+            <marker date="1414914796207" expanded="true" signature="3824:3869" placeholder="..." />
+            <marker date="1414914796207" expanded="true" signature="4306:4390" placeholder="..." />
           </folding>
         </state>
       </provider>
