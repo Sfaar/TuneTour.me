@@ -233,7 +233,8 @@ $(document).ready(function () {
       <div align="center">
         <div id="footerdiv">
           &copy; <strong><a href="http://tunetour.me">TuneTour.me</a></strong>; 2014<br/>
-          brought to you by <a href="http://nafSadh.com">nafSadh-khan</a>, Amitav Paul and M Ruhul Amin | built in <a href="http://www.yhack.org">#YHack 2014</a><br/>
+          brought to you by <a href="http://nafSadh.com">nafSadh-khan</a>,
+          <a href="http://amitavpaul.com/">Amitav Paul</a> and M Ruhul Amin | built in <a href="http://www.yhack.org">#YHack 2014</a><br/>
           powered with <a href="http://www.priceline.com">priceline.com API</a>,
           <a href="http://www.bandsintown.com/api/1.0/overview">Bandsintown Concert API</a>,
           <a href="http://api.eventful.com">eventful API</a> and
