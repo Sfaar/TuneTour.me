@@ -41,6 +41,7 @@ function artistLookup() {
   });
   request.done(function (msg) {
     $("#res").html(msg);
+    $("#siteName").css("margin-top","8pt");
     processLookupResult(msg);
   });
   request.fail(function (jqXHR, textStatus) {
@@ -239,11 +240,13 @@ $(document).ready(function () {
         <div id="footerdiv">
           &copy; <strong><a href="http://tunetour.me">TuneTour.me</a></strong>; 2014<br/>
           brought to you by <a href="http://nafSadh.com">nafSadh-khan</a>,
-          <a href="http://amitavpaul.com/">Amitav Paul</a> and M Ruhul Amin | built in <a href="http://www.yhack.org">#YHack 2014</a><br/>
-          powered with <a href="http://www.priceline.com">priceline.com API</a>,
+          <a href="http://amitavpaul.com/">Amitav Paul</a> and M Ruhul Amin<br/>
+          <small>first baked at <a href="http://www.yhack.org">#YHack 2014</a>
+          with <a href="http://www.priceline.com">priceline.com API</a>,
           <a href="http://www.bandsintown.com/api/1.0/overview">Bandsintown Concert API</a>,
           <a href="http://api.eventful.com">eventful API</a> and
           <a href="https://developers.google.com/maps/">Google Maps JS API v3</a>
+          </small>
         </div>
       </div>
     </footer>

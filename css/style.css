@@ -24,14 +24,12 @@ html, body, #container{
 #siteName h1 {font-size: 48pt; display: inline-block; vertical-align: baseline}
 #artistNameInput,#artistButton{
   font-size: 24pt;
-  line-height: 36pt;
-  vertical-align: baseline;
+  line-height: 32pt;
   border: 1px solid rgba(128,0,128,.5);
-  height: 40pt;
+  height: 48pt;
 }
 #artistNameInput{
   color: purple;
-  padding-left: 8px;
   background: rgba(255,255,255,.9);
   text-align: center;
 }
@@ -139,13 +137,13 @@ html, body, #container{
 }
 @media screen and (min-width : 980px) {
   #footerdiv {width: 60%;}
-  #artistNameInput { width : 50%; }
+  #artistNameInput { width : 58%; }
   #eventsList { width : 60%; margin: 12pt 8pt; }
   .hotelDiv {width:17%;}
 }
 @media screen and (max-width: 980px){
   #footerdiv {width: 95%;}
-  #artistNameInput{width: 90%;}
+  #artistNameInput{width: 93%;}
   #eventsList { width:95%; }
   .hotelDiv {width:17%;}
 }

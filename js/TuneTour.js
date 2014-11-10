@@ -47,7 +47,7 @@ function processTourEvents(json) {
       }
     }
 
-    $("#bigmapcanvas").delay(17890).height(500);
+    $("#bigmapcanvas").height(500);
     setMap("bigmapcanvas",locations,locations[0][1], locations[0][2],3);
   }
 }
@@ -132,7 +132,7 @@ function tourEventHtml(event, id){
     + " <div class='hotels'>"
     + " </div>"
     + " <div class='nearEvents' id='nearEvents"+id+"'>"
-    + "   nearby events: <img src='img/loading16.gif' width='12pt'/>"
+    + "   nearby events: <img src='img/anim_loading_sm.gif' width='10pt'/>"
     + " </div>"
     + "</div>";
 }
