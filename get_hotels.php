@@ -4,6 +4,7 @@
 </div>
 <?php
 set_time_limit(0);
+$getHotel = 0;
 /**
  * Created by PhpStorm.
  * User: nafSadh and amitav
@@ -60,6 +61,7 @@ foreach ($json as $item)
 		<span class="region"><?php echo $item['venue']['region'];?></span>
 		<span class="country"><?php echo $item['venue']['country'];?></span>
     </div>
+    <?php if($getHotel==true){ ?>
 		<div class="hotels">
       <span class="hotelsSectionTag">stay around:</span><br />
 		<?php 
@@ -115,6 +117,8 @@ foreach ($json as $item)
       <div class="hotelmapcanvas" id="hmc<?php echo $bmi;?>" >
       </div>
     </div>
+
+    <?php } //end if($getHotel==true) ?>
 		<div class="nearEvents">
       nearby events: 
 		<?php

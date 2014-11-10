@@ -5,7 +5,7 @@
 <meta name="google-site-verification" content="xbuRNTGkdLHrkm1w367xiWE_yI6HJV3KZAl_BzQwiSY"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link href='http://fonts.googleapis.com/css?family=Raleway|Lato|Exo|Lobster|Lemon' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Philosopher|Raleway|Lato|Exo|Lobster|Dancing Script' rel='stylesheet' type='text/css'>
 <link href="css/style.css" rel="stylesheet"/>
 <title>TuneTour.me</title>
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
@@ -15,9 +15,10 @@
 <script type="text/javascript" src="js/jquery.slimscroll.min.js"></script>
 <script type="text/javascript" src="js/jquery.fullPage.min.js"></script>
 <script src="js/jquery.watermarkinput.js" type="text/javascript"></script>
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.3/moment.min.js"></script>
+<script src="js/TuneTour.js" type="text/javascript"></script>
 <script type="application/javascript">
-var artistName = "";
-var eventCount = -1;
+
 
 function nameEncode(name) {
   name = name.replace("/", "%2F");
@@ -34,7 +35,7 @@ function artistLookup() {
   }
   $("#artistLookupResult").html("fetching tour data for: " + artistName);
   var request = $.ajax({
-    url: "get.php?url=http://api.bandsintown.com/artists/" + nameEncode(artistName) + ".json?app_id=Tail2Tune",
+    url: "get.php?url=http://api.bandsintown.com/artists/" + nameEncode(artistName) + ".json?api_version=2.0%26app_id=Tail2Tune",
     type: "GET",
     dataType: "text"
   });
@@ -61,6 +62,8 @@ function processLookupResult(json) {
     else text = artistName + " has " + eventCount + " upcoming events";
     $("#artistLookupResult").html(text);
     if (eventCount > 0) $("#listEventsButton").show();
+    imageurl = artist.image_url;
+    $("#artistImage").show().html("<img src='"+imageurl+"' />");
   }
 }
 
@@ -222,9 +225,11 @@ $(document).ready(function () {
     <div>
       <input id="artistNameInput"/>
       <button id="artistButton" onclick="artistLookup()">&crarr;</button>
+      <div class="loadLater" id="artistImage"></div>
       <div id="artistLookupResult"></div>
-      <button class="loadLater" id="listEventsButton" onclick="listEvents()">tell more about it</button>
+      <button class="loadLater" id="listEventsButton" onclick="listTourEvents()">tell more about it</button>
     </div>
+    <div id="debug"></div>
     <div id="eventsContainer" align="center">
       <div class="loadLater" id="eventsList"></div>
     </div>

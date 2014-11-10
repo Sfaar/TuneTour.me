@@ -1,4 +1,3 @@
-@import url(http://fonts.googleapis.com/css?family=Raleway);
 html, body, #container{
   color: #515;
   font-size: 14pt;
@@ -40,13 +39,17 @@ html, body, #container{
   background: rgba(128,0,128,.7);
   color: lavender;
 }
-
+#artistImage {margin-top: 8pt;}
+#artistImage img{
+  border: 4pt solid rgba(255,255,255,.8);
+  box-shadow: 0 0 3pt 0 rgba(25,25,25,.9);
+}
 #artistLookupResult{
   padding: 24pt;
   font-size: 21pt;
 }
 #eventsContainer{
-  margin-top: 128px;
+  margin-top: 20pt;
   width: 100%;
 }
 #eventsList {
@@ -65,14 +68,26 @@ html, body, #container{
 .event a:hover{ font-style: italic; border-bottom: 1px dotted; }
 .clrflt { clear: both; }
 .event hr{margin: 0; border:none; background: transparent;}
-.city { font-size: 21pt; font-weight: normal; display: inline-block; color: #FFFFFF;
-  margin-right: 8px;}
-.venue {font-size: 16pt; display: inline-block; color: linen;
-  margin-right: 8px; padding-left: 8px; border-left: 1px solid rgba(64,48,64,.8);}
-.date {font-size: 14pt; display: inline-block; color: linen; border-left: 1px solid rgba(64,48,64,.8); padding-left: 8px;}
-.placeDetail {border-top: 1px solid rgba(64,48,64,.8); color: linen;}
-.region { display: inline-block; margin-bottom: 12pt;}
-.country {display: inline-block;}
+
+.date {font-size: 11pt; display: inline-block;
+  float: right; text-align: right; margin: 2pt;
+  padding: 0 3pt; background: rgba(0,0,0,.3);}
+.time {font-size: 8pt;}
+.city { font-size: 18pt; font-weight: normal; display: inline-block;
+  color: #eee; margin-right: 3pt;}
+.placeDetail{padding-left: 3pt; border-left: 1px solid rgba(64,48,64,.8);}
+.region, .country { display: inline-block; font-size: 14pt;}
+.venueDiv {border-top: 1px solid rgba(64,48,64,.8); color: linen;}
+.venue {font-size: 15pt; display: inline-block; color: #ddd; font-family: "Philosopher", sans-serif; }
+.description {display: block; }
+.ticketInfo {font-size: 10pt;}
+
+.eventText {color: #101; font-size: 12pt; width: 250pt; height: auto;}
+.etVenuePlace {display: block;}
+.etVenueCity {font-weight: bold; margin-right: 3pt; padding-right: 3pt; border-right: 1px dotted grey;}
+.etVenuePlace .region, .etVenuePlace .country {font-size: 11pt;}
+.etVenueName {font-family: "Philosopher", sans-serif;}
+
 .hotels { clear: both;}
 .hotelDiv { margin: 2pt 8pt 2pt 0; width:160px; float: left; }
 .hotelDiv div {float: left;}
@@ -82,7 +97,8 @@ html, body, #container{
 .rating {font-size: 9pt;}
 .outof {font-size: 7pt; color: #777;}
 .nearEvents { font-size: 10pt; margin-top: 9pt;}
-.nearby { font-size: 9pt; padding-right: 3pt; padding-left: 3pt; border-left: 1px solid rgba(64,48,64,.8); }
+.nearby { font-size: 8pt; padding: 0 3pt; line-height: 9pt; height: 10pt;
+  border-left: 1px solid rgba(64,48,64,.8); }
 
 .hotelsSectionTag{ font-size: 10pt;}
 #bigmapShow {height: 96px; padding: 24px; line-height:48pt;}
@@ -107,13 +123,14 @@ html, body, #container{
 #listEventsButton {font-size: 16pt; background:rgba(255,255,255,.8); color: #551155; padding-left: 6pt 48pt; border: 1px solid purple;}
 
 #footerdiv{
-  background: rgba(255,255,255,.3);
+  font-size: 12pt;
+  background: rgba(25,5,25,.5);
   margin: 96pt 0;
   padding: 8pt;
   border-top: 1px solid purple;
-  color: #303;
+  color: #eee;
 }
-#footerdiv a {color: #515; text-decoration: none;}
+#footerdiv a {color: #ddd; text-decoration: none;}
 
 @media screen and (min-width : 2440px) {
   body{ zoom: 1.5; }
@@ -121,7 +138,7 @@ html, body, #container{
 @media screen and (min-width: 1200px){
 }
 @media screen and (min-width : 980px) {
-  #footerdiv {width: 50%;}
+  #footerdiv {width: 60%;}
   #artistNameInput { width : 50%; }
   #eventsList { width : 60%; margin: 12pt 8pt; }
   .hotelDiv {width:17%;}
