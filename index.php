@@ -57,7 +57,7 @@ function processLookupResult(json) {
     artistName = artist.name;
     $("#artistNameInput").val(artistName);
     eventCount = artist.upcoming_events_count;
-    if (eventCount == 0) text = "looks like " + artistName + " is staying out of stage for a while";
+    if (eventCount == 0) text = "looks like " + artistName + " have no upcoming event planned";
     else if (eventCount == 1) text = artistName + " has one upcoming event";
     else text = artistName + " has " + eventCount + " upcoming events";
     $("#artistLookupResult").html(text);
