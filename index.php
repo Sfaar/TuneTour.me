@@ -5,15 +5,15 @@
 <meta name="google-site-verification" content="xbuRNTGkdLHrkm1w367xiWE_yI6HJV3KZAl_BzQwiSY"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link href='http://fonts.googleapis.com/css?family=Philosopher|Raleway|Lato|Exo|Lobster|Dancing Script' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Philosopher|Raleway|Josefin+Sans:300|Exo|Lobster|Dancing+Script' rel='stylesheet' type='text/css'>
 <link href="css/style.css" rel="stylesheet"/>
 <title>TuneTour.me</title>
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
 <script src="http://code.jquery.com/jquery-1.11.0.js"></script>
-<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css"/>
+<!--<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css"/>-->
 <script src="js/jquery.easings.min.js"></script>
-<script type="text/javascript" src="js/jquery.slimscroll.min.js"></script>
-<script type="text/javascript" src="js/jquery.fullPage.min.js"></script>
+<!--<script type="text/javascript" src="js/jquery.slimscroll1.min.js"></script>-->
+<!--<script type="text/javascript" src="js/jquery.fullPage1.min.js"></script>-->
 <script src="js/jquery.watermarkinput.js" type="text/javascript"></script>
 <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.3/moment.min.js"></script>
 <script src="js/TuneTour.js" type="text/javascript"></script>
@@ -41,7 +41,6 @@ function artistLookup() {
   });
   request.done(function (msg) {
     $("#res").html(msg);
-    $("#siteName").css("margin-top","8pt");
     processLookupResult(msg);
   });
   request.fail(function (jqXHR, textStatus) {
@@ -62,9 +61,12 @@ function processLookupResult(json) {
     else if (eventCount == 1) text = artistName + " has one upcoming event";
     else text = artistName + " has " + eventCount + " upcoming events";
     $("#artistLookupResult").html(text);
-    if (eventCount > 0) $("#listEventsButton").show();
-    imageurl = artist.image_url;
-    $("#artistImage").show().html("<img src='"+imageurl+"' />");
+    if (eventCount > 0) {
+      $("#t2t").css("padding-top","8pt");
+      $("#listEventsButton").show();
+      imageurl = artist.image_url;
+      $("#artistImage").show().html("<img src='" + imageurl + "' />");
+    }
   }
 }
 
@@ -199,6 +201,17 @@ function loadHotelMap(elemName) {
   setMarkers2(map, locations);
 }
 
+$(window).scroll(function(e){
+  $el = $('.fixedElement');
+  if ($(this).scrollTop() > 200 && $el.css('position') != 'fixed'){
+    $('.fixedElement').css({'position': 'fixed', 'top': '0px'});
+  }
+  if ($(this).scrollTop() < 200 && $el.css('position') == 'fixed')
+  {
+    $('.fixedElement').css({'position': 'static', 'top': '0px'});
+  }
+});
+
 //use it:
 $(document).ready(function () {
   $("#artistNameInput").val("").Watermark("enter artist's name", "#ccc");
@@ -207,25 +220,27 @@ $(document).ready(function () {
   });
   $(".loadLater").hide();
   $("#res").hide();
-  $('#container').fullpage({
-    anchors: [],
-    autoScrolling: false,
-    loopBottom: false,
-    normalScrollElements: '#eventsList',
-    navigation: false,
-    scrollOverflow: true
-  });
+
+//  $('#container').fullpage({
+//    anchors: [],
+//    autoScrolling: false,
+//    loopBottom: false,
+//    normalScrollElements: '#eventsList',
+//    navigation: false,
+//    scrollOverflow: true
+//  });
 });
 </script>
 </head>
 <body>
 <div id="container">
-  <div class="section" id="t2t" align="center">
+  <div class="sgction" id="t2t" align="center">
     <div id="siteName"><img src="img/tt.png" height="160pt"><br/><h1>TuneTour.me</h1></div>
 
-    <div>
-      <input id="artistNameInput"/>
-      <button id="artistButton" onclick="artistLookup()">&crarr;</button>
+    <div id="wrap">
+      <span id="TuneTour"></span>
+      <input id="artistNameInput" /><br/>
+      <button id="artistButton" onclick="artistLookup()">&raquo;</button>
       <div class="loadLater" id="artistImage"></div>
       <div id="artistLookupResult"></div>
       <button class="loadLater" id="listEventsButton" onclick="listTourEvents()">tell more about it</button>
@@ -234,6 +249,7 @@ $(document).ready(function () {
     <div id="eventsContainer" align="center">
       <div class="loadLater" id="eventsList"></div>
     </div>
+    <div id="anchor"><a href="#TuneTour">&uarr;<a/></div>
 
     <footer>
       <div align="center">
